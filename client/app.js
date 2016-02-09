@@ -1,5 +1,7 @@
-var m = require('mithril')
-var MyComponent = require('./components/MyComponent')
+var m = require('mithril');
+var RowLocation = require('./components/rowLocation');
+var Company = require('./components/company');
+var Header = require('./components/header');
 
 //
 // Global variable for global state (e.g. currentUser)
@@ -17,10 +19,18 @@ m.route(document.getElementById('app'), '/', {
     // controller: function () {},
 
     view: function (ctrl) {
-      return m('.app', [
-        m('h1', 'Node Catapult'),
-        m.component(MyComponent, { title: 'Welcome to my app!' })
-      ])
+    	return  m('body', [
+    		m('h1', Header),
+    	  m.component(Company)
+    		])
+    }
+  },
+  '/row': {
+  	view: function (ctrl) {
+    	return  m('body', [
+    		m('h1', Header),
+    	  m.component(RowLocation)
+    		])
     }
   }
 

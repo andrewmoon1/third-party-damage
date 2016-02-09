@@ -4,6 +4,14 @@ var Path = require('path')
 
 var routes = express.Router()
 
+var session = require('cookie-session')
+// app.use(session({
+//   name: 'my-app:session',
+//   secret: process.env.SESSION_SECRET || 'development',
+//   secure: (!! process.env.SESSION_SECRET),
+//   signed: true
+// }))
+
 //
 // Provide a browserified file at a specified path
 //
