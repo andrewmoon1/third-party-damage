@@ -24,18 +24,20 @@ exports.view = function (ctrl, options) {
             m('h4', "Information is saved as soon as it is entered"),
            m('table', [
              m("td", [
-              m('input', {onchange: function(e) {window.App.company = e.target.value;}}, "Company"),
-               'Company'
+              m('input', {onchange: function(e) {window.App.company = e.target.value;}}),
+               ' Company'
              ]),
              m("tr", [
-             m('input', {onchange: function(e) {window.App.cc = e.target.value;}}, "Company"), 'Cost Center',
+             m('input', {onchange: function(e) {window.App.cc = e.target.value;}}), ' Cost Center',
              ]),
              m("td", [
                m('input[type=checkbox][name=Bill]', {onchange: function(e) {return ctrl.checked(e)}}), 'Bill',
                m('input[type=checkbox][name=No_Bill]', {onchange: function(e) {return ctrl.checked(e)}}), 'No Bill',
-               m('input', {onchange: function(e) {window.App.reason = e.target.value}}), 'Reason'
+               m('input', {onchange: function(e) {window.App.reason = e.target.value}}), ' Reason'
              ]),
-             m('button', {onclick: function() {ctrl.submit()}}, "Submit"),
+             m('tr', [
+               m('button', {onclick: function() {ctrl.submit()}}, "Submit"),
+             ]),
            ]),
            ])
 }

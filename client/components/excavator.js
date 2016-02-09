@@ -15,7 +15,7 @@ exports.controller = function (options) {
     }
   }
   ctrl.submit = function() {
-    m.route('/excavator')
+    m.route('/worktype');
   }
   ctrl.newRow = function(item) {
     return m("td", [
@@ -33,8 +33,8 @@ exports.controller = function (options) {
 exports.view = function (ctrl, options) {
   return  m('table', [
      m("tr", [
-      m('h5', "Excavator Type"),
-      m('h6', "Use spacebar to check a box, tab to change between boxes."),
+      m('h4', "Excavator Type"),
+      m('h5', "Use spacebar to check a box, tab to change between boxes."),
         m("form", [
           m("tr", [
             ctrl.row.slice(0,5).map(function(item) {
@@ -57,8 +57,8 @@ exports.view = function (ctrl, options) {
         ]),
       ]),
      m("tr", [
-      m('h5', "Excavation Equipment Type"),
-      m('h6', "Use spacebar to check a box, tab to change between boxes."),
+      m('h4', "Excavation Equipment Type"),
+      m('h5', "Use spacebar to check a box, tab to change between boxes."),
         m("form", [
           m("tr", [
             ctrl.equip.slice(0,6).map(function(item) {

@@ -32,8 +32,8 @@ exports.controller = function (options) {
 exports.view = function (ctrl, options) {
   return  m('table', [
      m("tr", [
-      m('h5', "Right-Of-Way/Damage Location(Where Event Occurred) (Select all that apply)"),
-      m('h6', "Use spacebar to check a box, tab to change between boxes."),
+      m('h4', "Right-Of-Way/Damage Location(Where Event Occurred) (Select all that apply)"),
+      m('h5', "Use spacebar to check a box, tab to change between boxes."),
         m("form", [
           m("tr", [
             ctrl.row.slice(0,5).map(function(item) {

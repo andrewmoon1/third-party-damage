@@ -5,6 +5,7 @@ var Header = require('./components/header');
 var Parties = require('./components/parties');
 var Facility = require('./components/facilityType');
 var Excavator = require('./components/excavator');
+var WorkType = require('./components/work_type');
 //var db =require('../server/lib/db');
 //
 // Global variable for global state (e.g. currentUser)
@@ -60,6 +61,14 @@ m.route(document.getElementById('app'), '/', {
     		])
     }
   },
+  '/worktype': {
+  	view: function (ctrl) {
+    	return  m('body', [
+    		m('h1', Header),
+    	  m.component(WorkType)
+    		])
+    }
+  },
   '/all': {
   	view: function (ctrl) {
     	return  m('body', [
@@ -68,7 +77,8 @@ m.route(document.getElementById('app'), '/', {
     	  m.component(RowLocation),
     	  m.component(Parties),
     	  m.component(Facility),
-    	  m.component(Excavator)
+    	  m.component(Excavator),
+    	  m.component(WorkType)
     		])
     }
   }

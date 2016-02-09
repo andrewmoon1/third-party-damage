@@ -2,7 +2,8 @@ var m = require('mithril');
 var ROW = require('./rowLocation.js');
 var Parties = require('./parties.js');
 var Facility = require('./facilityType.js');
-var Facility = require('./excavator.js');
+var excavator = require('./excavator.js');
+var worktype = require('./work_type.js');
 //var db = require('../../server/lib/db.js');
 
 exports.controller = function (options) {
@@ -24,6 +25,9 @@ exports.controller = function (options) {
     };
     ctrl.excavator = function() {
       m.route('/excavator');
+    };
+    ctrl.workType = function() {
+      m.route('/worktype');
     };
     ctrl.all = function() {
       m.route('/all');
@@ -48,6 +52,9 @@ exports.view = function (ctrl, options) {
             ]),
             m('td', [
               m('button', {onclick:function() {ctrl.excavator()}}, "Excavtor Type & Equipment"),
+            ]),
+            m('td', [
+              m('button', {onclick:function() {ctrl.workType()}}, "Work Performed Type"),
             ]),
             m('td', [
               m('button', {onclick:function() {ctrl.all()}}, "All At Once"),
