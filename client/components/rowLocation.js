@@ -15,7 +15,7 @@ exports.controller = function (options) {
     }
   }
   ctrl.submit = function() {
-    m.route('/row')
+    m.route('/parties')
   }
   ctrl.newRow = function(item) {
     return m("td", [
@@ -57,15 +57,6 @@ exports.view = function (ctrl, options) {
           ]),
          ]),
         ]),
-      m('tr', [
-        m('h5', "Parties Involved"),
-        m('tr', [
-          m('input'), "Person To Be Billed",
-          m('tr', [
-            m('input[type=checkbox][name=item]'), "Same As Above"
-            ]),
-          ]),
-
-        ])
+     m('button', {onclick: function() {ctrl.submit()}}, "Submit"),
     ])
 }

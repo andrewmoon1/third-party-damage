@@ -2,6 +2,7 @@ var m = require('mithril');
 var RowLocation = require('./components/rowLocation');
 var Company = require('./components/company');
 var Header = require('./components/header');
+var Parties = require('./components/parties');
 
 //
 // Global variable for global state (e.g. currentUser)
@@ -30,6 +31,14 @@ m.route(document.getElementById('app'), '/', {
     	return  m('body', [
     		m('h1', Header),
     	  m.component(RowLocation)
+    		])
+    }
+  },
+  '/parties': {
+  	view: function (ctrl) {
+    	return  m('body', [
+    		m('h1', Header),
+    	  m.component(Parties)
     		])
     }
   }
