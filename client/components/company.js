@@ -20,8 +20,8 @@ exports.controller = function (options) {
 }
 
 exports.view = function (ctrl, options) {
-  return m('h1', "Preliminary Pipeline Damage Report"),
-           m('form', [
+  return   m('form', [
+            m('h4', "Information is saved as soon as it is entered"),
            m('table', [
              m("td", [
               m('input', {onchange: function(e) {window.App.company = e.target.value;}}, "Company"),

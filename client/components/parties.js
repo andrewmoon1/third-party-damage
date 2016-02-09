@@ -16,7 +16,7 @@ exports.controller = function (options) {
   }
     }
     ctrl.submit = function() {
-      m.route('/row')
+      m.route('/facility')
     }
 }
 
