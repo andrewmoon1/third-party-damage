@@ -15,7 +15,7 @@ exports.controller = function (options) {
     }
   }
   ctrl.submit = function() {
-    m.route('/all')
+    m.route('/onecall')
   }
   ctrl.newRow = function(item) {
     return m("td", [
@@ -73,7 +73,7 @@ exports.view = function (ctrl, options) {
           m("tr", [
             m('input', {onchange: function(e) {window.App.otherWorkType = e.target.value}}), ' Other'
             ]),
-          m("h4", "Pipeline Encroachment"),
+          m("h5", "Pipeline Encroachment"),
           m("tr", [
             m('input[type=checkbox][name=compEncroachment]', {onchange: function(e) {return ctrl.checked(e)}}), ' Company'
             ]),

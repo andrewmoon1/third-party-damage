@@ -6,6 +6,7 @@ var Parties = require('./components/parties');
 var Facility = require('./components/facilityType');
 var Excavator = require('./components/excavator');
 var WorkType = require('./components/work_type');
+var OneCall = require('./components/onecall');
 //var db =require('../server/lib/db');
 //
 // Global variable for global state (e.g. currentUser)
@@ -69,6 +70,14 @@ m.route(document.getElementById('app'), '/', {
     		])
     }
   },
+  '/onecall': {
+  	view: function (ctrl) {
+    	return  m('body', [
+    		m('h1', Header),
+    	  m.component(OneCall)
+    		])
+    }
+  },
   '/all': {
   	view: function (ctrl) {
     	return  m('body', [
@@ -78,7 +87,8 @@ m.route(document.getElementById('app'), '/', {
     	  m.component(Parties),
     	  m.component(Facility),
     	  m.component(Excavator),
-    	  m.component(WorkType)
+    	  m.component(WorkType),
+    	  m.component(OneCall)
     		])
     }
   }

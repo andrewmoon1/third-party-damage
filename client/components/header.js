@@ -4,6 +4,7 @@ var Parties = require('./parties.js');
 var Facility = require('./facilityType.js');
 var excavator = require('./excavator.js');
 var worktype = require('./work_type.js');
+var onecall = require('./onecall.js');
 //var db = require('../../server/lib/db.js');
 
 exports.controller = function (options) {
@@ -28,6 +29,9 @@ exports.controller = function (options) {
     };
     ctrl.workType = function() {
       m.route('/worktype');
+    };
+    ctrl.onecall = function() {
+      m.route('/onecall');
     };
     ctrl.all = function() {
       m.route('/all');
@@ -55,6 +59,9 @@ exports.view = function (ctrl, options) {
             ]),
             m('td', [
               m('button', {onclick:function() {ctrl.workType()}}, "Work Performed Type"),
+            ]),
+            m('td', [
+              m('button', {onclick:function() {ctrl.onecall()}}, "One-Call Notification"),
             ]),
             m('td', [
               m('button', {onclick:function() {ctrl.all()}}, "All At Once"),

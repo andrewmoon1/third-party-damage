@@ -21,7 +21,8 @@ exports.controller = function (options) {
 
 exports.view = function (ctrl, options) {
   return   m('form', [
-            m('h4', "Information is saved as soon as it is entered"),
+            m('h4', "Company"),
+            m('h5', "Information is saved as soon as it is entered"),
            m('table', [
              m("td", [
               m('input', {onchange: function(e) {window.App.company = e.target.value;}}),
